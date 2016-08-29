@@ -20125,7 +20125,7 @@
 	  debug('flow', state.flowing);
 	  if (state.flowing) {
 	    do {
-	      var chunk = stream.read();
+	      var chunk = stream.read(Number.MAX_SAFE_INTEGER);
 	    } while (null !== chunk && state.flowing);
 	  }
 	}
